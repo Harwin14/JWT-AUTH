@@ -29,7 +29,7 @@ const Login = () => {
        </div> 
      </div> 
    </section>
-  )
+  ) 
 }
 
 export default Login
