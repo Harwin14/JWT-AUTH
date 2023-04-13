@@ -1,0 +1,28 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJBZ3VuZyBIYXJ3aW4iLCJlbWFpbCI6ImFndW5nQGdtYWlsLmNvbSIsImlhdCI6MTY4MTI3MzgyMywiZXhwIjoxNjgxMjczODM4fQ.pwVCVwbcdrCAeWR7-7UCk4BwtEbu3NOAj8m2KqOSbEY
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Agung Harwin n",
+    "email":"agung@gmail.com",
+    "password":"12345",
+    "confPassword":"12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"agung@gmail.com",
+    "password":"12345"
+}
+
+###
+GET http://localhost:5000/token
+
+
+###
+DELETE http://localhost:5000/logout
