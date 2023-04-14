@@ -26,8 +26,8 @@ const Dashboard = () => {
             if (error.response) {
                 navigate('/');
             }
-        }
-    };
+        } 
+    }; 
 
     const axiosJWT = axios.create();
 
