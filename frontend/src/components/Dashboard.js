@@ -23,7 +23,7 @@ const Dashboard = () => {
             setName(decoded.name);
             setExpire(decoded.exp);
         } catch (error) {
-            if (error.response) {
+            if (error.response) { 
                 navigate('/');
             }
         }  
