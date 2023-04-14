@@ -7,8 +7,8 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confPassword, setConfPassword] = useState('');
-    const [msg, setMsg] = useState('')
-    const history = useNavigate()
+    const [msg, setMsg] = useState('');
+    const navigate = useNavigate();
 
     const Register = async (e) => {
         e.preventDefault();
@@ -19,21 +19,22 @@ const Register = () => {
                 password: password,
                 confPassword: confPassword,
             });
-            history.push('/')
-            } catch (error) {
-                if(error.response){
-                    setMsg(error.response.data.msg);
-                }
+            navigate('/');
+        } catch (error) {
+            if (error.response) {
+                setMsg(error.response.data.msg);
+            }
         }
     };
+    console.log(name, password, email);
     return (
         <section className='hero has-background-grey-light is-fullheight is-fullwidth'>
             <div className='hero-body'>
                 <div className='container'>
                     <div className='columns is-centered'>
                         <div className='column is-4-desktop'>
-                            <form onSubmit={ Register } className='box'>
-                            <p className='has-text-centered'>{msg}</p>
+                            <form onSubmit={Register} className='box'>
+                                <p className='has-text-centered'>{msg}</p>
                                 <div className='field mt-5'>
                                     <label className='label'>Name</label>
                                     <div className='controls'>
@@ -52,7 +53,7 @@ const Register = () => {
                                     <label className='label'>Email</label>
                                     <div className='controls'>
                                         <input
-                                            type='text'
+                                            type='email'
                                             className='input'
                                             placeholder='Email'
                                             value={email}
@@ -93,7 +94,9 @@ const Register = () => {
                                     </div>
                                 </div>
                                 <div className='field mt-5'>
-                                    <button className='button is-success is-fullwidth'>
+                                    <button
+                                        className='button is-success is-fullwidth'
+                                    >
                                         Register
                                     </button>
                                 </div>
