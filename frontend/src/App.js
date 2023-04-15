@@ -1,19 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Register from './components/Register';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProductList from './components/ProductList';
+import AddProduct from './components/AddProduct';
+import EditProduct from './components/EditProduct';
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route exact path='/' element={<Login />}></Route>
-                <Route path='/register' element={<Register />}></Route>
-                <Route path='/dashboard' element={<> <Navbar /> <Dashboard /> </>} >     
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <div className='container'>
+            <Router>
+                <Routes>
+                    <Route path='/' element={<ProductList />}></Route>
+                    <Route path='/add' element={<AddProduct />}></Route>
+                    <Route path='/edit/:id' element={<EditProduct />}></Route>
+                </Routes>
+            </Router>
+        </div>
     );
 }
 
