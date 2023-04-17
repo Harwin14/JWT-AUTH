@@ -36,7 +36,7 @@ const ProductList = () => {
                         <th>Price</th>
                         <th>Actions</th>
                     </tr>
-                </thead>  
+                </thead>
                 <tbody>
                     {products.map((product, index) => (
                         <tr key={product.id}>
