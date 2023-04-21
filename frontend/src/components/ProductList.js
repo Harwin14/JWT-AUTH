@@ -63,7 +63,7 @@ const ProductList = () => {
             </table>
         </div>
     );
-};
+}; 
 
 export default ProductList;
  
