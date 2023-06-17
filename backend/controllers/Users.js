@@ -79,7 +79,7 @@ export const Login = async (req, res) => {
 
 export const Logout = async (req, res) => {
     const refreshToken = req.cookies.refreshToken;
-    if (!refreshToken) return res.sendStatus(204);
+    if (!refreshToken) return res.sendStatus(204).json({msg:'token tidak ada'});
     const user = await Users.findAll({
         where: {
             refresh_token: refreshToken,

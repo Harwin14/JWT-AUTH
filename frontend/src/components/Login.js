@@ -20,8 +20,8 @@ const Login = () => {
             if (error.response) {
                 setMsg(error.response.data.msg);
             }
+            console.log(error.response)
         }
-        console.log(email,password);
     };
     return (
         <section className='hero has-background-grey-light is-fullheight is-fullwidth'>
